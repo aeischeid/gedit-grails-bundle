@@ -1,0 +1,283 @@
+<!--
+    a collection of grails tags to be used with a text editor like gedit
+    author: Aaron Eischeid
+  -->
+
+<?xml version="1.0" encoding="UTF-8"?>
+<TagList xmlns="http://gedit.sourceforge.net/some-location">
+<TagGroup sort="true" name="Grails Tags">
+
+  <Tag name="actionSubmit">
+    <Begin>&lt;g:actionSubmit value="</Begin>
+    <End>" /&gt;</End>
+  </Tag>
+
+  <Tag name="applyLayout">
+    <Begin>&lt;g:applyLayout name="</Begin>
+    <End>" /&gt;</End>
+  </Tag>
+  
+  <Tag name="checkBox">
+    <Begin>&lt;g:checkBox name="</Begin>
+    <End>" /&gt;</End>
+  </Tag>
+  
+  <Tag name="collect">
+    <Begin>&lt;g:collect in="${}" expr="" &gt;</Begin>
+    <End>&lt;/g:collect&gt;</End>
+  </Tag>
+  
+  <Tag name="cookie">
+    <Begin>&lt;g:cookie name="</Begin>
+    <End>" /&gt;</End>
+  </Tag>
+  
+  <Tag name="createLink">
+    <Begin>&lt;g:createLink </Begin>
+    <End>" /&gt;</End>
+  </Tag>
+  
+  <Tag name="createLinkTo">
+    <Begin>&lt;g:createLinkTo "</Begin>
+    <End>" /&gt;</End>
+  </Tag>
+  
+  <Tag name="currencySelect">
+    <Begin>&lt;g:currencySelect name="</Begin>
+    <End>" /&gt;</End>
+  </Tag>
+  
+  <Tag name="datePicker">
+    <Begin>&lt;g:datePicker name="</Begin>
+    <End>" /&gt;</End>
+  </Tag>
+  
+  <Tag name="each">
+    <Begin>&lt;g:each in="${}" &gt;</Begin>
+    <End>&lt;/g:each&gt;</End>
+  </Tag>
+  
+  <Tag name="eachError">
+    <Begin>&lt;g:eachError bean="${}" &gt;</Begin>
+    <End>&lt;/g:eachError&gt;</End>
+  </Tag>
+  
+  <Tag name="else">
+    <Begin>&lt;g:else&gt;</Begin>
+    <End>&lt;/g:else&gt;</End>
+  </Tag>
+  
+  <Tag name="elseif">
+    <Begin>&lt;elseif test="${}" &gt;</Begin>
+    <End>&lt;/g:elseif&gt;</End>
+  </Tag>
+  
+  <Tag name="fieldValue">
+    <Begin>&lt;g:fieldValue bean="${}" field="</Begin>
+    <End>" /&gt;</End>
+  </Tag>
+  
+  <Tag name="findAll">
+    <Begin>&lt;g:findAll in="${}" expr="" &gt;</Begin>
+    <End>&lt;/g:findAll&gt;</End>
+  </Tag>
+  
+  <Tag name="form">
+    <Begin>&lt;g:form name="" action="" id="" &gt;</Begin>
+    <End>&lt;/g:form&gt;</End>
+  </Tag>
+    
+  <Tag name="formRemote">
+    <Begin>&lt;g:formRemote name="" update="" url="[controller:' ', action:' ', params:[:]]" &gt;</Begin>
+    <End>&lt;/g:formRemote&gt;</End>
+  </Tag>
+  
+  <Tag name="formatDate">
+    <Begin>&lt;g:formatDate format="yyyy-MM-dd" date="${</Begin>
+    <End>}" /&gt;</End>
+  </Tag>
+  
+  <Tag name="formatNumber">
+    <Begin>&lt;g:formatNumber number="${</Begin>
+    <End>}" format="\\$###,##0" /&gt;</End>
+  </Tag>
+  
+  <Tag name="grep">
+    <Begin>&lt;g:grep in="${}" filter="" &gt;</Begin>
+    <End>&lt;/g:grep&gt;</End>
+  </Tag>
+  
+  <Tag name="hasErrors">
+    <Begin>&lt;g:hasErrors&gt;</Begin>
+    <End>&lt;/g:hasErrors&gt;</End>
+  </Tag>
+  
+  <Tag name="header">
+    <Begin>&lt;g:header name="</Begin>
+    <End>" /&gt;</End>
+  </Tag>
+  
+  <Tag name="hiddenField">
+    <Begin>&lt;g:hiddenField name="</Begin>
+    <End>" /&gt;</End>
+  </Tag>
+  
+  <Tag name="if">
+    <Begin>&lt;g:if test=" </Begin>
+    <End>" &gt; &lt;/g:if&gt;</End>
+  </Tag>
+  
+  <Tag name="include">
+    <Begin>&lt;g:include action="show" id="</Begin>
+    <End>" /&gt;</End>
+  </Tag>
+  
+  <Tag name="javascript">
+    <Begin>&lt;g:javascript src="</Begin>
+    <End>" /&gt;</End>
+  </Tag>
+  
+  <Tag name="layoutBody">
+    <Begin>&lt;g:layoutBody /&gt;</Begin>
+  </Tag>
+  
+  <Tag name="layoutHead">
+    <Begin>&lt;g:layoutHead /&gt;</Begin>
+  </Tag>
+  
+  <Tag name="layoutTitle">
+    <Begin>&lt;g:layoutTitle /&gt;</Begin>
+  </Tag>
+  
+  <Tag name="link">
+    <Begin>&lt;g:link &gt;</Begin>
+    <End>&lt;/g:link&gt;</End>
+  </Tag>
+  
+  <Tag name="localeSelect">
+    <Begin>&lt;g:localeSelect name="</Begin>
+    <End>" /&gt;</End>
+  </Tag>
+  
+  <Tag name="message">
+    <Begin>&lt;g:message code="</Begin>
+    <End>" /&gt;</End>
+  </Tag>
+  
+  <Tag name="meta">
+    <Begin>&lt;g:meta name="</Begin>
+    <End>" /&gt;</End>
+  </Tag>
+  
+  <Tag name="pageProperty">
+    <Begin>pageProperty(name:'</Begin>
+    <End>')</End>
+  </Tag>
+  
+  <Tag name="paginate">
+    <Begin>&lt;g:paginate total="${</Begin>
+    <End>}" /&gt;</End>
+  </Tag>
+  
+  <Tag name="passwordField">
+    <Begin>&lt;g:passwordField name="</Begin>
+    <End>" /&gt;</End>
+  </Tag>
+  
+  <Tag name="radio">
+    <Begin>&lt;g:radio name="" value="</Begin>
+    <End>" /&gt;</End>
+  </Tag>
+  
+  <Tag name="radioGroup">
+    <Begin>&lt;g:radioGroup name="" values="" &gt;</Begin>
+    <End>&lt;/g:radioGroup&gt;</End>
+  </Tag>
+  
+  <Tag name="remoteField">
+    <Begin>&lt;g:remoteField action="" update=""  name="" value="${</Begin>
+    <End>}" /&gt;</End>
+  </Tag>
+  
+  <Tag name="remoteFunction">
+    <Begin>${remoteFunction(action:'</Begin>
+    <End>',update:'', params:'' )}</End>
+  </Tag>
+  
+  <Tag name="remoteLink">
+    <Begin>&lt;g:remoteLink action="" id="" update="" params="[:]" &gt;</Begin>
+    <End>&lt;/g:remoteLink&gt;</End>
+  </Tag>
+    
+  <Tag name="render">
+    <Begin>&lt;g:render template="</Begin>
+    <End>" /&gt;</End>
+  </Tag>
+   
+  <Tag name="renderErrors">
+    <Begin>&lt;g:renderErrors </Begin>
+    <End> /&gt;</End>
+  </Tag>
+  
+  <Tag name="resource">
+    <Begin>&lt;g:resource dir="css" file="</Begin>
+    <End>" /&gt;</End>
+  </Tag>
+  
+  <Tag name="select">
+    <Begin>&lt;g:select from="${</Begin>
+    <End>}" /&gt;</End>
+  </Tag>
+  
+  <Tag name="set">
+    <Begin>&lt;g:set var="foo" value="${</Begin>
+    <End>}" /&gt;</End>
+  </Tag>
+  
+  <Tag name="sortableColumn">
+    <Begin>&lt;g:sortableColumn property="</Begin>
+    <End>" /&gt;</End>
+  </Tag>
+  
+  <Tag name="submitButton">
+    <Begin>&lt;g:submitButton name="update" value="</Begin>
+    <End>" /&gt;</End>
+  </Tag>
+    
+  <Tag name="submitToRemote">
+    <Begin>&lt;g:submitToRemote update="</Begin>
+    <End>" /&gt;</End>
+  </Tag>
+    
+  <Tag name="textArea">
+    <Begin>&lt;g:textArea name="</Begin>
+    <End>" /&gt;</End>
+  </Tag>
+  
+  <Tag name="textField">
+    <Begin>&lt;g:textField name="</Begin>
+    <End>" /&gt;</End>
+  </Tag>
+    
+  <Tag name="timeZoneSelect">
+    <Begin>&lt;g:timeZoneSelect name="</Begin>
+    <End>" /&gt;</End>
+  </Tag>
+  
+  <Tag name="timeZoneSelect">
+    <Begin>&lt;g:timeZoneSelect name="</Begin>
+    <End>" /&gt;</End>
+  </Tag>
+
+  <Tag name="uploadForm">
+    <Begin>&lt;g:uploadForm name="myUpload" &gt;</Begin>
+    <End>&lt;/g:uploadForm&gt;</End>
+  </Tag>
+  
+  <Tag name="while">
+    <Begin>&lt;g:while test="" &gt;</Begin>
+    <End>&lt;/g:while&gt;</End>
+  </Tag>
+  
+</TagGroup>
+</TagList>
