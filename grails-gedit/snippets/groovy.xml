@@ -1,0 +1,93 @@
+<?xml version='1.0' encoding='utf-8'?>
+<snippets language="groovy">
+  <snippet>
+    <text><![CDATA[if ($1) { // $2
+   $0
+}]]></text>
+    <tag>if</tag>
+    <description>if</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[else{
+	$1
+}]]></text>
+    <tag>else</tag>
+    <description>else</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[render(view:'$1', model:['${2:item}':${2:item}])]]></text>
+    <tag>render</tag>
+    <description>render</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[redirect(action:${1:show}, id:$2)]]></text>
+    <tag>redirect</tag>
+    <description>redirect</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[try{
+	$1
+}]]></text>
+    <tag>try</tag>
+    <description>try</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[try {
+   $2
+} catch (${1:Exception} e) {
+   $3
+}
+$0]]></text>
+    <tag>tc</tag>
+    <description>try..catch</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[if ($1) { // $2
+
+   $0
+
+} else { // $3
+
+   
+
+}]]></text>
+    <tag>ife</tag>
+    <description>if..else</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[for ($${1:i} = ${2:0}; $${1:i} < $3; $${1:i}++){
+	// code...
+	$0
+}]]></text>
+    <tag>for</tag>
+    <description>for</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[if($1.hasErrors()) {
+  $1.errors.each {
+    println it
+  }
+}]]></text>
+    <tag>errors</tag>
+    <description>errors</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[flash.message = "$1"]]></text>
+    <tag>fla</tag>
+    <description>flash.message</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[switch ($1) {
+  case $2:
+    // code..
+    ${3:break}
+
+  default:
+     // 
+}
+
+]]></text>
+    <tag>switch</tag>
+    <description>switch</description>
+  </snippet>
+</snippets>

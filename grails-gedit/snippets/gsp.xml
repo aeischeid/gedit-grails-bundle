@@ -1,0 +1,74 @@
+<?xml version='1.0' encoding='utf-8'?>
+<snippets language="gsp">
+  <snippet>
+    <text><![CDATA[<g:if test="$1" >
+	$0
+</g:if>]]></text>
+    <tag>if</tag>
+    <description>if</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[<g:else>
+	$1
+</g:else>]]></text>
+    <tag>else</tag>
+    <description>else</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[<g:each in="${$1}" var="${2:item}" ${3:status="i"}>
+	$0
+</g:each>
+]]></text>
+    <tag>each</tag>
+    <description>each</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[<g:link controller="$1" action="${2:show}" id="$3">${2:show}</g:link>$0
+]]></text>
+    <tag>link</tag>
+    <description>link</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[<g:render template="$1" ${2:model}="$3" />]]></text>
+    <tag>render</tag>
+    <description>render</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[<div $1>
+	${0:$GEDIT_SELECTED_TEXT}
+</div>]]></text>
+    <tag>div</tag>
+    <description>div</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[<g:formatDate format="${1:MM-dd-yyyy}" date="${2:date}"/>]]></text>
+    <tag>formatDate</tag>
+    <description>formatDate</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[<g:datePicker name="${1:myDate}" value="${${2:new Date()}}" precision="${3:day}" />]]></text>
+    <tag>date</tag>
+    <description>date</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[<g:select name="$1"
+          from="${$2.${3:list()}}"
+          value="$4"
+          optionKey="${5:id}"
+          ${6:noSelection="['':'']"} />]]></text>
+    <tag>select</tag>
+    <description>select</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[<g:passwordField name="${1:myPasswordField}" value="${${2:myPassword}}" />]]></text>
+    <tag>pass</tag>
+    <description>password</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[<g:findAll in="${$1}" expr="$2">
+     $0
+</g:findAll>]]></text>
+    <tag>find</tag>
+    <description>findAll</description>
+  </snippet>
+</snippets>
