@@ -1,4 +1,4 @@
-bundle created by Aaron Eischeid, install script only tested on Ubuntu 8.04 and 8.10
+bundle created by Aaron Eischeid, install script only tested on Ubuntu 8.04 - 9.04
 
 manually install plugins snippets and styles by placing in ~/.gnome2/gedit file which may need to be
 created
