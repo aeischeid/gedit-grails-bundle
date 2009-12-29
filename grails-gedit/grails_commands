@@ -1,0 +1,119 @@
+# Linux grails(8) completion
+#
+export GRAILS_VERSION="$(ls -lhr $HOME/.grails | egrep -i '1\.' | head -1 | gawk '{print $9 }')"
+
+_get_domain_classes(){
+	find ./grails-app/domain -iname *.groovy 2> /dev/null | tr \\n ' ' | sed 's/\.groovy//g' | sed 's/\.\/grails-app\/domain\///g' | tr '/' \.
+}
+
+_get_tests(){
+	find ./test -iname *.groovy 2> /dev/null | sed 's/\.\/test\/integration\///g' | sed 's/\Tests.groovy//g' | tr '/' \.
+}
+
+_get_plugins(){
+	cat $HOME/.grails/$GRAILS_VERSION/plugins/plugins-list.xml 2> /dev/null | grep \<plugin | gawk -F"name=" '{print $2}' | sed 's/\"//g' | sed 's/\/\{0,1\}\>//g'
+}
+
+_get_scripts(){
+	for D in $SCRIPT_DIRS; do
+		if [ -d $D ]
+			then ls -1 $D/*.groovy 2> /dev/null | sed -E 's/(.*)\/(.*)\.groovy/\2/' | sed -E 's/([A-Z])/-\1/g' | sed -E 's/^-//' | tr "[:upper:]" "[:lower:]"
+		fi
+	done | sort | uniq | grep -vE "^_"
+}
+
+_grails_comp(){
+	local cur prev opts base
+	COMPREPLY=()
+	cur="${COMP_WORDS[COMP_CWORD]}"
+	prev="${COMP_WORDS[COMP_CWORD-1]}"
+	if [ -r ./grails-app ]; then
+		SCRIPT_DIRS="$GRAILS_HOME/scripts ./scripts ~/.grails/scripts"
+		if [ -d plugins ]
+			then for PLUGIN_DIR in $(ls -d plugins/*/scripts 2> /dev/null); do
+			SCRIPT_DIRS="$SCRIPT_DIRS $PLUGIN_DIR"
+			done
+		fi
+ 
+		opts=$(_get_scripts)
+	
+		case "${prev}" in
+			generate-all)
+				local classes=$(_get_domain_classes)
+				COMPREPLY=( $(compgen -W "${classes}" -- ${cur}) )
+				return 0
+				;;
+			generate-views)
+				local classes=$(_get_domain_classes)
+				COMPREPLY=( $(compgen -W "${classes}" -- ${cur}) )
+				return 0
+				;;
+			generate-controller)
+				local classes=$(_get_domain_classes)
+				COMPREPLY=( $(compgen -W "${classes}" -- ${cur}) )
+				return 0
+				;;
+			test-app)
+				local test_classes=$(_get_tests)
+				COMPREPLY=( $(compgen -W "${test_classes}" -- ${cur}) )
+				return 0
+				;;
+			install-plugin)
+				local plugins=$(_get_plugins)
+				COMPREPLY=( $(compgen -W "${plugins}" -- ${cur}) )
+				return 0
+				;;
+			package-plugin)
+				COMPREPLY=( $(compgen -f) )
+				return 0
+				;;
+			plugin-info)
+				local plugins=$(opts)
+				COMPREPLY=( $(compgen -W "${plugins}" -- ${cur}) )
+				return 0
+				;;
+			help)
+				local opts=$(_get_scripts)
+				COMPREPLY=( $(compgen -W "${opts}" -- ${cur}) )
+				return 0
+				;;
+			*)
+			;;
+		esac
+	
+		if [[ "${opts}" =~ "${prev}" ]]; then
+			COMPREPLY=( $(compgen -f) )
+			return 0
+		fi
+	
+		COMPREPLY=($(compgen -W "${opts}" -- ${cur})) 
+		return 0
+	else
+		opts="create-app create-plugin help list-plugins package-plugin plugin-info set-proxy"
+		case "${prev}" in
+			create-app)
+				COMPREPLY=( $(compgen -f) )
+				return 0
+				;;
+			create-plugin)
+				COMPREPLY=( $(compgen -f) )
+				return 0
+				;;
+			package-plugin)
+				COMPREPLY=( $(compgen -f) )
+				return 0
+				;;
+			plugin-info)
+				local plugins=$(_get_plugins)
+				COMPREPLY=( $(compgen -W "${plugins}" -- ${cur}) )
+				return 0
+				;;
+			*)
+				;;
+		esac
+		COMPREPLY=($(compgen -W "${opts}" -- ${cur})) 
+		return 0
+	fi
+}
+ 
+complete -F _grails_comp grails
