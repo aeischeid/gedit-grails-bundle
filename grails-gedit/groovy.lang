@@ -22,6 +22,7 @@
     <style id="number" _name="Number" map-to="def:decimal"/>
     <style id="reserved" _name="Future Reserved Keywords" map-to="def:error"/>
     <style id="type" _name="Data Type" map-to="def:type"/>
+    <style id="variable" _name="Variable" map-to="def:identifier"/>
   </styles>
  
   <definitions>
@@ -54,6 +55,10 @@
     <context id="close-comment-outside-comment" style-ref="error">
       <match>\*/(?!\*)</match>
     </context>
+    
+    <context id="variable" style-ref="variable">
+      <match>\$[{,\[]+[a-zA-Z0-9_\.]*[},\]]+</match>
+    </context>
  
     <context id="externals" style-ref="external">
       <keyword>import</keyword>
@@ -83,6 +88,18 @@
       <keyword>short</keyword>
       <keyword>void</keyword>
     </context>
+    
+    <context id="simple-data-objects" style-ref="type">
+      <keyword>Boolean</keyword>
+      <keyword>Byte</keyword>
+      <keyword>Char</keyword>
+      <keyword>Date</keyword>
+      <keyword>Double</keyword>
+      <keyword>Float</keyword>
+      <keyword>Integer</keyword>
+      <keyword>Long</keyword>
+      <keyword>String</keyword>
+    </context>
  
     <context id="storage-class" style-ref="storage-class">
       <keyword>abstract</keyword>
@@ -105,17 +122,26 @@
       <keyword>break</keyword>
       <keyword>case</keyword>
       <keyword>catch</keyword>
+      <keyword>chain</keyword>
       <keyword>continue</keyword>
       <keyword>default</keyword>
       <keyword>do</keyword>
       <keyword>each</keyword>
       <keyword>else</keyword>
       <keyword>finally</keyword>
+      <keyword>flash</keyword>
       <keyword>for</keyword>
+      <keyword>forward</keyword>
       <keyword>if</keyword>
+      <keyword>log</keyword>
+      <keyword>params</keyword>
+      <keyword>println</keyword>
+      <keyword>redirect</keyword>
       <keyword>render</keyword>
+      <keyword>request</keyword>
       <keyword>return</keyword>
       <keyword>throw</keyword>
+      <keyword>session</keyword>
       <keyword>switch</keyword>
       <keyword>try</keyword>
       <keyword>while</keyword>
@@ -158,9 +184,11 @@
         <context ref="line-comment"/>
         <context ref="block-comment"/>
         <context ref="close-comment-outside-comment"/>
+        <context ref="variable"/>
         <context ref="externals"/>
         <context ref="declarations"/>
         <context ref="primitive-types"/>
+        <context ref="simple-data-objects"/>
         <context ref="storage-class"/>
         <context ref="scope-declarations"/>
         <context ref="flow"/>
