@@ -3,7 +3,7 @@
 #Added directory structure verification
 MIME_PACKAGES="/usr/share/mime/packages/"
 GTKSOURCEVIEW="/usr/share/gtksourceview-2.0/language-specs/"
-TAGLIST="/usr/share/gedit-2/taglist/"
+TAGLIST="/usr/share/gedit-2/plugins/taglist/"
 BASH_COMPLETION="/etc/bash_completion.d"
 PLUGINS="$HOME/.gnome2/gedit/plugins/"
 SNIPPETS="$HOME/.gnome2/gedit/snippets/"
