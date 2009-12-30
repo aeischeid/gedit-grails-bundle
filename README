@@ -1,4 +1,7 @@
-bundle created by Aaron Eischeid, install script only tested on Ubuntu 8.04 - 9.04
+bundle created by Aaron Eischeid, install script only tested on Ubuntu 8.04 - 9.04 (working on 9.10)
 
-manually install plugins snippets and styles by placing in ~/.gnome2/gedit file which may need to be
-created
+manually install plugins and styles by placing in ~/.gnome2/gedit file 
+
+12/29/09 - updating install script to automatically insert plugins and snippets as described above. choose autoComplete plugin over word completion because it doesn't conflict with the snippets plugin.
+  still trying to find where to put grails tags now. Currently it is a mystery they and won't show up inside of gedit
+
