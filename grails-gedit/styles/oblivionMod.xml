@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+ Author: Aaron Eischeid <a.eischeid@gmail.com>
+ I don't care about licenses this was just for my own benefit
+ I ripped most of this file off from the oblivion.xml file included in Ubuntu 9.10
+ look there for credits and such if you're into that
+ /usr/share/gtksourceview-2.0/styles/oblivion.xml
+ 
+ also I looked here:http://tango.freedesktop.org/Tango_Icon_Theme_Guidelines in 
+ wanting to not break much with the tango color palette idea.
+ 
+ changes may not be obvious - bigger ones have to do with draw spaces and 
+ bracket hightlighting plugins
+
+-->
+
+<style-scheme id="oblivionMod" _name="OblivionMod" version="1.0">
+
+  <author>Aaron Eischeid</author>
+  <_description>Slightly darker and less sharp than defualt Oblivion</_description>
+
+  <!-- Tango Palette -->
+  <color name="butter1"                     value="#fce94f"/>
+  <color name="butter2"                     value="#edd400"/>
+  <color name="butter3"                     value="#c4a000"/>
+  <color name="chameleon1"                  value="#8ae234"/>
+  <color name="chameleon2"                  value="#73d216"/>
+  <color name="chameleon3"                  value="#4e9a06"/>
+  <color name="orange1"                     value="#fcaf3e"/>
+  <color name="orange2"                     value="#f57900"/>
+  <color name="orange3"                     value="#ce5c00"/>
+  <color name="skyblue1"                    value="#729fcf"/>
+  <color name="skyblue2"                    value="#3465a4"/>
+  <color name="skyblue3"                    value="#204a87"/>
+  <color name="plum1"                       value="#ad7fa8"/>
+  <color name="plum2"                       value="#75507b"/>
+  <color name="plum3"                       value="#5c3566"/>
+  <color name="chocolate1"                  value="#e9b96e"/>
+  <color name="chocolate2"                  value="#c17d11"/>
+  <color name="chocolate3"                  value="#8f5902"/>
+  <color name="scarletred1"                 value="#ef2929"/>
+  <color name="scarletred2"                 value="#cc0000"/>
+  <color name="scarletred3"                 value="#a40000"/>
+  <color name="aluminium1"                  value="#eeeeec"/>
+  <color name="aluminium2"                  value="#d3d7cf"/>
+  <color name="aluminium3"                  value="#babdb6"/>
+  <color name="aluminium4"                  value="#888a85"/>
+  <color name="aluminium5"                  value="#555753"/>
+  <color name="aluminium6"                  value="#2e3436"/>
+
+  <!-- Global Settings -->
+  <style name="text"                        foreground="aluminium2" background="aluminium6"/>
+  <style name="selection"                   foreground="aluminium1" background="aluminium4"/>
+  <style name="cursor"                      foreground="aluminium2"/>
+  <style name="current-line"                background="aluminium5"/>
+  <style name="line-numbers"                foreground="aluminium5" background="#black"/>
+  <style name="draw-spaces"                 foreground="#4B4D49"/>
+
+  <!-- Bracket Matching -->
+  <style name="bracket-match"               foreground="aluminium6" background="orange1" bold="true"/>
+  <style name="bracket-mismatch"            foreground="aluminium1" background="scarletred3" bold="true"/>
+
+  <!-- Right Margin -->
+  <style name="right-margin"                foreground="aluminium1" />
+  
+  <!-- Search Matching -->
+  <style name="search-match"                foreground="aluminium1" background="chameleon1"/>
+
+  <!-- Comments -->
+  <style name="def:comment"                 foreground="aluminium4"/>
+  <style name="def:shebang"                 foreground="aluminium4" bold="true"/>
+  <style name="def:doc-comment-element"     italic="true"/>
+
+  <!-- Constants -->
+  <style name="def:constant"                foreground="butter2"/>
+  <style name="def:string"                  foreground="butter2"/>
+  <style name="def:special-char"            foreground="orange3"/>
+  <style name="def:special-constant"        foreground="orange3"/>
+  <style name="def:floating-point"          foreground="orange3"/>
+
+  <!-- Identifiers -->
+  <style name="def:identifier"              foreground="skyblue1"/>
+
+  <!-- Statements -->
+  <style name="def:statement"               foreground="#F2F2F0" bold="true"/>
+
+  <!-- Types -->
+  <style name="def:type"                    foreground="chameleon2" bold="true"/>
+
+  <!-- Others -->
+  <style name="def:preprocessor"            foreground="plum1"/>
+  <style name="def:error"                   foreground="aluminium1" background="scarletred2" bold="true"/>
+  <style name="def:note"                    background="butter1" foreground="aluminium5" bold="true"/>
+  <style name="def:underlined"              italic="true" underline="true"/>
+
+  <!-- Language specific -->
+  <style name="diff:added-line"             foreground="butter2"/>
+  <style name="diff:removed-line"           foreground="skyblue1"/>
+  <style name="diff:changed-line"           foreground="plum1"/>
+  <style name="diff:diff-file"              foreground="chameleon1" bold="true"/> 
+  <style name="diff:location"               foreground="chameleon1"/> 
+  <style name="diff:special-case"           foreground="#white" bold="true"/>
+  
+  <style name="xml:tags"                    foreground="chameleon2"/>
+  <style name="xml:namespace"               bold="true"/>
+
+  <style name="js:object"                   foreground="chameleon2" bold="true"/>
+  <style name="js:constructors"             foreground="chameleon2"/>
+
+  <style name="latex:display-math"          foreground="plum1"/>
+  <style name="latex:command"               foreground="chameleon2" bold="true"/>
+  <style name="latex:include"               use-style="def:preprocessor"/>
+
+  <style name="sh:variable"                 foreground="plum1"/>
+  <style name="sh:variable-definition"      foreground="chameleon2"/>
+
+</style-scheme>
+
