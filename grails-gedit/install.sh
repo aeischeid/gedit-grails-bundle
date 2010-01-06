@@ -42,5 +42,6 @@ sudo cp ./grails $BASH_COMPLETION
 sudo cp ./Grails.tags.gz /usr/share/gedit-2/plugins/taglist/
 sudo cp ./snippets/groovy.xml $SNIPPETS
 sudo cp ./snippets/gsp.xml $SNIPPETS
+sudo cp ./snippets/jquery.xml $SNIPPETS
 
 sudo update-mime-database /usr/share/mime

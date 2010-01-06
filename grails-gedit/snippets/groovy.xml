@@ -90,4 +90,13 @@ $0]]></text>
     <tag>switch</tag>
     <description>switch</description>
   </snippet>
+  <snippet>
+    <text><![CDATA[def $1 = $2]]></text>
+    <tag>def</tag>
+    <description>def</description>
+  </snippet>
+  <snippet>
+    <tag>hasM</tag>
+    <description>hasMany</description>
+  </snippet>
 </snippets>

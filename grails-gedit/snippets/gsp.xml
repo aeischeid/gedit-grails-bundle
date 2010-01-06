@@ -42,7 +42,7 @@
   </snippet>
   <snippet>
     <text><![CDATA[<g:formatDate format="${1:MM-dd-yyyy}" date="${2:date}"/>]]></text>
-    <tag>formatDate</tag>
+    <tag>formatD</tag>
     <description>formatDate</description>
   </snippet>
   <snippet>
@@ -70,5 +70,12 @@
 </g:findAll>]]></text>
     <tag>find</tag>
     <description>findAll</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[<g:form controller="$1" action="${2:edit}" id="$3">
+	$0
+</g:form>]]></text>
+    <tag>form</tag>
+    <description>form</description>
   </snippet>
 </snippets>
