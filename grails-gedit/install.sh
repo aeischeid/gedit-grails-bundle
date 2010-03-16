@@ -40,8 +40,8 @@ sudo cp ./gsp-mime.xml /usr/share/mime/packages/
 sudo cp ./gsp.lang /usr/share/gtksourceview-2.0/language-specs/
 sudo cp ./grails $BASH_COMPLETION
 sudo cp ./Grails.tags.gz /usr/share/gedit-2/plugins/taglist/
+#copy the snippets xml files
 sudo cp ./snippets/groovy.xml $SNIPPETS
 sudo cp ./snippets/gsp.xml $SNIPPETS
-sudo cp ./snippets/jquery.xml $SNIPPETS
 
 sudo update-mime-database /usr/share/mime

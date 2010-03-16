@@ -1,13 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <snippets language="groovy">
   <snippet>
-    <text><![CDATA[if ($1) { // $2
-   $0
-}]]></text>
-    <tag>if</tag>
-    <description>if</description>
-  </snippet>
-  <snippet>
     <text><![CDATA[else{
 	$1
 }]]></text>
@@ -30,29 +23,6 @@
 }]]></text>
     <tag>try</tag>
     <description>try</description>
-  </snippet>
-  <snippet>
-    <text><![CDATA[try {
-   $2
-} catch (${1:Exception} e) {
-   $3
-}
-$0]]></text>
-    <tag>tc</tag>
-    <description>try..catch</description>
-  </snippet>
-  <snippet>
-    <text><![CDATA[if ($1) { // $2
-
-   $0
-
-} else { // $3
-
-   
-
-}]]></text>
-    <tag>ife</tag>
-    <description>if..else</description>
   </snippet>
   <snippet>
     <text><![CDATA[for ($${1:i} = ${2:0}; $${1:i} < $3; $${1:i}++){

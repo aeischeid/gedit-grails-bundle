@@ -1,10 +1,25 @@
-bundle created by Aaron Eischeid, install script only tested on Ubuntu 8.04 - 9.04 (working on 9.10)
+bundle assembled by Aaron Eischeid, 
+
+ - install script only tested on current Ubuntu (9.10)
 
 manually install plugins and styles by placing in ~/.gnome2/gedit file 
 
-12/29/09 - updating install script to automatically insert plugins and snippets as described above. choose autoComplete plugin over word completion because it doesn't conflict with the snippets plugin.
-  still trying to find where to put grails tags now. Currently it is a mystery they and won't show up inside of gedit. considering getting rid of them and focusing on improving snippets.
+12/29/09 - 
+  updating install script to automatically insert plugins and snippets as 
+  described above. choose autoComplete plugin over word completion because it 
+  doesn't conflict with the snippets plugin. still trying to find where to put 
+  grails tags now. Currently it is a mystery they and won't show up inside of 
+  gedit. considering getting rid of them and focusing on improving snippets.
 
-12/30/09 - improving by small degrees the groovy.lang file for groovy syntax highlighting.  
+12/30/09 - 
+  improving by small degrees the groovy.lang file for groovy syntax highlighting.
 
-01/06/10 - updating snippets - add/re-adding couple plugins - slightly modded oblivion color scheme 
+01/06/10 - 
+  updating snippets - add/re-adding couple plugins - slightly modded oblivion 
+  color scheme should do "sudo apt-get install ack-grep" if you want to have a 
+  faster find in files plugin.
+
+03/16/10 - 
+  updating snippets - clones of html and js snippets for use in gsp's, and java 
+  snippets for use in groovy files. found the ctrl+space helper for snippet 
+  suggestions.
