@@ -1,0 +1,97 @@
+#!/bin/bash
+
+if [ -z "$EDITOR" ]; then
+    EDITOR="vim"
+fi
+#echo "Editor: $EDITOR"
+
+if [ -z "$1" ]; then
+    echo "Usage: gred <domain class> [options]"
+    echo " options:"
+    echo "     -tests       :  open all unit and itegration tests."
+    echo "     -unit        :  open unit tests"
+    echo "     -integration :  open integration tests"
+    echo "     -int         :  open integration tests"
+    echo "     -builder     :  open test object builders"
+    echo "     -controller  :  open controller"
+    echo "     -service     :  open all services"
+    echo "     -views       :  open all .gsp files for domain class"
+    echo "     -reports     :  open all test reports"
+fi
+
+INPUT=$(echo "$1" | tr [A-Z] [a-z])
+#echo "Input: $INPUT"
+
+if [ ! -d "$(pwd)/grails-app" -a ! -f "$(pwd)/application.properties" ]; then
+    echo 'This is not a valid Grails project!'
+    exit
+fi
+
+OPTION=''
+if [ ! -z $2 ]; then
+    OPTION=$2
+fi
+
+if [ "$OPTION" = '-unit' -o "$OPTION" = '-tests' -o "$OPTION" = '-all' ]; then
+    FILE_NAME="$INPUT*Tests.groovy"
+    DIR_PORTION='test/unit'
+    find $DIR_PORTION -iname "$FILE_NAME" -exec "$EDITOR" {} \;
+fi
+
+if [ "$OPTION" = '-integration' -o "$OPTION" = '-int' -o "$OPTION" = '-tests' -o "$OPTION" = '-all' ]; then
+    FILE_NAME="$INPUT*Tests.groovy"
+    DIR_PORTION='test/integration'
+    find $DIR_PORTION -iname "$FILE_NAME" -exec "$EDITOR" {} \;
+fi
+
+if [ "$OPTION" = '-builder' -o "$OPTION" = '-all' ]; then
+    FILE_NAME="$INPUT\Builder.groovy"
+    DIR_PORTION='grails-app'
+    find $DIR_PORTION -iname "$FILE_NAME" -exec "$EDITOR" {} \;
+fi
+
+if [ "$OPTION" = '-views' -o "$OPTION" = '-all' ]; then
+    FILE_NAME="*.gsp"
+    DIR_PORTION="grails-app/views/$INPUT"
+    if [ -d "grails-app/views/$INPUT" ]; then
+        find $DIR_PORTION -name "$FILE_NAME" -exec "$EDITOR" {} \;
+    fi
+fi
+
+if [ "$OPTION" = '-controller' -o "$OPTION" = '-all' ]; then
+    FILE_NAME="$INPUT\Controller.groovy"
+    DIR_PORTION='grails-app/controllers'
+    find $DIR_PORTION -iname "$FILE_NAME" -exec "$EDITOR" {} \;
+fi
+
+if [ "$OPTION" = '-service' -o "$OPTION" = '-all' ]; then
+    FILE_NAME="$INPUT\Service.groovy"
+    DIR_PORTION='grails-app/services'
+    find $DIR_PORTION -iname "$FILE_NAME" -exec "$EDITOR" {} \;
+fi
+
+if [ "$OPTION" = '-reports' -o "$OPTION" = '-all' ]; then
+    FILE_NAME="TEST-*$INPUT*\Tests.txt"
+    DIR_PORTION='target/test-reports/plain'
+    find $DIR_PORTION -iname "$FILE_NAME" -exec "$EDITOR" {} \;
+fi
+
+if [ "$OPTION" = '-conf' -o "$OPTION" = '-all' ]; then
+    case "$INPUT" in
+        data*) FILE_NAME="*Data*";;
+        boot*) FILE_NAME="*Boot*";;
+        config*) FILE_NAME="*Config*";;
+        map*) FILE_NAME="*Map*";;
+        build*) FILE_NAME="*Build*";;
+        *) FILE_NAME="*.groovy";;
+    esac
+    DIR_PORTION='grails-app/conf'
+    find $DIR_PORTION -iname "$FILE_NAME" -exec "$EDITOR" {} \;
+fi
+
+if [ "$OPTION" = '' -o "$OPTION" = '-domain' -o "$OPTION" = '-all' ]; then
+    FILE_NAME="$INPUT.groovy"
+    DIR_PORTION='grails-app'
+    find $DIR_PORTION -iname "$FILE_NAME" -exec "$EDITOR" {} \;
+fi
+

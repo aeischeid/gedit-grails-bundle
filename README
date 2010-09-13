@@ -1,6 +1,6 @@
 bundle assembled by Aaron Eischeid, 
 
- - install script only tested on current Ubuntu (9.10)
+ - install script only tested in Ubuntu 10.04
 
 manually install plugins and styles by placing in ~/.gnome2/gedit file 
 
@@ -16,10 +16,18 @@ manually install plugins and styles by placing in ~/.gnome2/gedit file
 
 01/06/10 - 
   updating snippets - add/re-adding couple plugins - slightly modded oblivion 
-  color scheme should do "sudo apt-get install ack-grep" if you want to have a 
+  color scheme. Should do "sudo apt-get install ack-grep" if you want to have a 
   faster find in files plugin.
 
 03/16/10 - 
   updating snippets - clones of html and js snippets for use in gsp's, and java 
   snippets for use in groovy files. found the ctrl+space helper for snippet 
   suggestions.
+  
+09/13/10 - 
+  updating g:tags, and install script for them. adding gred script from Marco - 
+  http://mycodesnippets.com/2010/05/15/edit-grails-files-with-gedit-and-gred-on-linux/
+  still need to add export EDITOR="/usr/bin/gedit" to your ~/.bashrc file.
+  
+  
+  
