@@ -27,6 +27,16 @@
     <End>" /&gt;</End>
   </Tag>
   
+  <Tag name="country">
+    <Begin>&lt;g:country code="</Begin>
+    <End>" /&gt;</End>
+  </Tag>
+  
+  <Tag name="countrySelect">
+    <Begin>&lt;g:countrySelect name="user.country" from="</Begin>
+    <End>" /&gt;</End>
+  </Tag>
+  
   <Tag name="createLink">
     <Begin>&lt;g:createLink </Begin>
     <End>" /&gt;</End>
@@ -87,6 +97,11 @@
     <End>&lt;/g:formRemote&gt;</End>
   </Tag>
   
+  <Tag name="formatBoolean">
+    <Begin>&lt;g:formatBoolean boolean="${</Begin>
+    <End>}" true="True!" false="False!" /&gt;</End>
+  </Tag>
+  
   <Tag name="formatDate">
     <Begin>&lt;g:formatDate format="yyyy-MM-dd" date="${</Begin>
     <End>}" /&gt;</End>
@@ -118,7 +133,7 @@
   </Tag>
   
   <Tag name="if">
-    <Begin>&lt;g:if test=" </Begin>
+    <Begin>&lt;g:if env="production" test="</Begin>
     <End>" &gt; &lt;/g:if&gt;</End>
   </Tag>
   
@@ -129,6 +144,11 @@
   
   <Tag name="javascript">
     <Begin>&lt;g:javascript src="</Begin>
+    <End>" /&gt;</End>
+  </Tag>
+  
+  <Tag name="join">
+    <Begin>&lt;g:join in="" delimiter="</Begin>
     <End>" /&gt;</End>
   </Tag>
   
@@ -253,15 +273,15 @@
     <Begin>&lt;g:textField name="</Begin>
     <End>" /&gt;</End>
   </Tag>
-    
+  
   <Tag name="timeZoneSelect">
     <Begin>&lt;g:timeZoneSelect name="</Begin>
     <End>" /&gt;</End>
   </Tag>
   
-  <Tag name="timeZoneSelect">
-    <Begin>&lt;g:timeZoneSelect name="</Begin>
-    <End>" /&gt;</End>
+  <Tag name="unless">
+    <Begin>&lt;g:unless test="" env="development" &gt;</Begin>
+    <End>&lt;/g:unless&gt;</End>
   </Tag>
 
   <Tag name="uploadForm">
