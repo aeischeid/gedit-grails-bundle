@@ -1,8 +1,25 @@
-bundle assembled by Aaron Eischeid, 
+Gedit Grails Bundle 
+====================
 
- - install script only tested in Ubuntu 10.04
+This Bundle aims to augment the default editor for the Gnome Desktop Environment
+to improve its efficiency specifically as a tool for Groovy/Grails development.
 
-manually install plugins and styles by placing in ~/.gnome2/gedit file 
+Features
+--------
+
+- Syntax Highlighting
+- Various autoCompletion tools
+- Command Line helpers and scripts
+- Themes
+
+Installation
+------------
+
+- Install script included (only tested in Ubuntu 10.04)
+- Manually install plugins and styles by placing in ~/.gnome2/gedit file 
+
+History
+-------
 
 12/29/09 - 
   updating install script to automatically insert plugins and snippets as 
@@ -27,7 +44,7 @@ manually install plugins and styles by placing in ~/.gnome2/gedit file
 09/13/10 - 
   updating g:tags, and install script for them. adding gred script from Marco - 
   http://mycodesnippets.com/2010/05/15/edit-grails-files-with-gedit-and-gred-on-linux/
-  still need to add export EDITOR="/usr/bin/gedit" to your ~/.bashrc file.
-  
-  
-  
+  will still need to manuallyadd export EDITOR="/usr/bin/gedit" to your ~/.bashrc 
+  file.
+  added zen-coding-plugin and inherited it's licence as well. modified to not
+  conflict with snap-open plugin 
