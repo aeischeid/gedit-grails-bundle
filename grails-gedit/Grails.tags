@@ -1,8 +1,3 @@
-<!--
-    a collection of grails tags to be used with a text editor like gedit
-    author: Aaron Eischeid
-  -->
-
 <?xml version="1.0" encoding="UTF-8"?>
 <TagList xmlns="http://gedit.sourceforge.net/some-location">
 <TagGroup sort="true" name="Grails Tags">

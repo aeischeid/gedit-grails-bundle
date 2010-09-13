@@ -472,19 +472,6 @@ $0]]></text>
     <description>hover</description>
   </snippet>
   <snippet>
-    <text><![CDATA[<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
-	"http://www.w3.org/TR/html4/strict.dtd">
-]]></text>
-    <tag>doctype</tag>
-    <description>HTML — 4.01 Strict</description>
-  </snippet>
-  <snippet>
-    <text><![CDATA[<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-]]></text>
-    <tag>doctype</tag>
-    <description>HTML — 4.0 Transitional</description>
-  </snippet>
-  <snippet>
     <text><![CDATA[.html(${1/(.+)/(?1:':)/}${1:Some text <b>and bold!</b>}${1/(.+)/(?1:':)/})$0]]></text>
     <tag>html</tag>
     <description>html</description>
@@ -534,11 +521,6 @@ $0]]></text>
   <snippet>
     <text><![CDATA[:lt(${1:n})$0]]></text>
     <description>:lt(n)</description>
-  </snippet>
-  <snippet>
-    <text><![CDATA[<a href="mailto:${1:joe@example.com}?subject=${2:feedback}">${3:email me}</a> $0]]></text>
-    <tag>mailto</tag>
-    <description>Mail Anchor</description>
   </snippet>
   <snippet>
     <text><![CDATA[\$.map(${1:array}, function(${2:item}${3:, ${4:index}}) {
@@ -916,33 +898,5 @@ $0]]></text>
     <text><![CDATA[<${1:p}>$GEDIT_SELECTED_TEXT</${1}>]]></text>
     <description>Wrap Selection in Open/Close Tag</description>
     <accelerator><![CDATA[<Shift><Alt>w]]></accelerator>
-  </snippet>
-  <snippet>
-    <text><![CDATA[<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN"
-	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd">
-]]></text>
-    <tag>doctype</tag>
-    <description>XHTML — 1.0 Frameset</description>
-  </snippet>
-  <snippet>
-    <text><![CDATA[<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-]]></text>
-    <tag>doctype</tag>
-    <description>XHTML — 1.0 Strict</description>
-  </snippet>
-  <snippet>
-    <text><![CDATA[<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-]]></text>
-    <tag>doctype</tag>
-    <description>XHTML — 1.0 Transitional</description>
-  </snippet>
-  <snippet>
-    <text><![CDATA[<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
-	"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
-]]></text>
-    <tag>doctype</tag>
-    <description>XHTML — 1.1</description>
   </snippet>
 </snippets>
