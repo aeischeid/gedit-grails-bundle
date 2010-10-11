@@ -45,6 +45,9 @@ History
   updating g:tags, and install script for them. adding gred script from Marco - 
   http://mycodesnippets.com/2010/05/15/edit-grails-files-with-gedit-and-gred-on-linux/
   will still need to manuallyadd export EDITOR="/usr/bin/gedit" to your ~/.bashrc 
-  file.
+  file. 
   added zen-coding-plugin and inherited it's licence as well. modified to not
   conflict with snap-open plugin 
+  
+10/10/10 - 
+  add groovy++ (.gpp) to get groovy syntax highlighting too.
