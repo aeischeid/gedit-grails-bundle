@@ -51,3 +51,6 @@ History
   
 10/10/10 - 
   add groovy++ (.gpp) to get groovy syntax highlighting too.
+
+27/10/10
+  add classbrowser plugin with groovy support
