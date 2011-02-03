@@ -15,7 +15,7 @@ Features
 Installation
 ------------
 
-- Install script included (only tested in Ubuntu 10.04)
+- Install script included (typically tested in latest Ubuntu)
 - Manually install plugins and styles by placing in ~/.gnome2/gedit file 
 
 History
@@ -52,5 +52,9 @@ History
 10/10/10 - 
   add groovy++ (.gpp) to get groovy syntax highlighting too.
 
-27/10/10
-  add classbrowser plugin with groovy support
+2/3/11 -
+  merege added classbrowser plugin with groovy support from zedar's branch (thanks!)
+  
+
+  
+

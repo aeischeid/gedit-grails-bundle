@@ -1,254 +1,34 @@
 <?xml version='1.0' encoding='utf-8'?>
 <snippets language="gsp">
   <snippet>
-    <text><![CDATA[.add('${1:selector expression}')$0]]></text>
-    <tag>add</tag>
-    <description>add</description>
-  </snippet>
-  <snippet>
-    <text><![CDATA[.addClass('${1:class name}')$0]]></text>
-    <tag>addClass</tag>
-    <description>addClass</description>
-  </snippet>
-  <snippet>
-    <text><![CDATA[.after('${1:Some text <b>and bold!</b>}')$0]]></text>
-    <tag>after</tag>
-    <description>after</description>
-  </snippet>
-  <snippet>
-    <text><![CDATA[\$.ajax({
-  url: '${1:mydomain.com/url}',
-  type: '${2:POST}',
-${3/(.+)/(?1:  dataType\: ':)/}${3:xml/html/script/json}${3/(.+)/(?1:',
-:)/}${4/(.+)/(?1:  data\: $.param\( $\(':)/}${4:Element or Expression}${4/(.+)/(?1:'\) \),
-:)/}${5/(.+)/(?1:  complete\: function\(\) {:)/}${5:
-    //called when complete}${5/(.+)/(?1:  },
-:)/}${6/(.+)/(?1:  success\: function\(\) {:)/}${6:
-    //called when successful}${6/(.+)/(?1: },
-:)/}${7/(.+)/(?1:  error\: function\(\) {:)/}${7:
-    //called when there is an error}${7/(.+)/(?1:  }
-:)/}});
-$0]]></text>
-    <tag>$ajax</tag>
-    <description>$.ajax</description>
-  </snippet>
-  <snippet>
-    <text><![CDATA[.ajaxError(function(${1:request, settings}) {
-  ${2://stuff to do when an AJAX call returns an error};
-});
-$0]]></text>
-    <tag>ajaxError</tag>
-    <description>ajaxError</description>
-  </snippet>
-  <snippet>
-    <text><![CDATA[.ajaxSend(function(${1:request, settings}) {
-  ${2://stuff to do before an AJAX request is sent};
-});
-$0]]></text>
-    <tag>ajaxSend</tag>
-    <description>ajaxSend</description>
-  </snippet>
-  <snippet>
-    <text><![CDATA[\$.ajaxSetup({
-  url: "${1:mydomain.com/url}",
-  type: "${2:POST}",
-${3/(.+)/(?1:  dataType\: ":)/}${3:xml/html/script/json}${3/(.+)/(?1:",
-:)/}${4/(.+)/(?1:  data\: $.param\( $\(":)/}${4:Element or Expression}${4/(.+)/(?1:"\) \),
-:)/}${5/(.+)/(?1:  complete\: function\(\) {:)/}${5:
-    //called when complete}${5/(.+)/(?1:  },
-:)/}${6/(.+)/(?1:  success\: function\(\) {:)/}${6:
-    //called when successful}${6/(.+)/(?1: },
-:)/}${7/(.+)/(?1:  error\: function\(\) {:)/}${7:
-    //called when there is an error}${7/(.+)/(?1:  },
-:)/}});
-$0]]></text>
-    <tag>$ajaxSetup</tag>
-    <description>$.ajaxSetup</description>
-  </snippet>
-  <snippet>
-    <text><![CDATA[\$.ajaxStart(function() {
-  ${1://stuff to do when an AJAX call is started and no other AJAX calls are in progress};
-});
-$0]]></text>
-    <tag>ajaxStart</tag>
-    <description>ajaxStart</description>
-  </snippet>
-  <snippet>
-    <text><![CDATA[\$.ajaxStop(function() {
-  ${1://stuff to do when all AJAX calls have completed};
-});
-$0]]></text>
-    <tag>ajaxStop</tag>
-    <description>ajaxStop</description>
-  </snippet>
-  <snippet>
-    <text><![CDATA[.ajaxSuccess(function() {
-	${1:// executes whenever an AJAX request completes successfully}
-});$0]]></text>
-    <tag>ajaxSuccess</tag>
-    <description>ajaxSuccess</description>
-  </snippet>
-  <snippet>
-    <text><![CDATA[.andSelf()$0]]></text>
-    <tag>andSelf</tag>
-    <description>andSelf</description>
-  </snippet>
-  <snippet>
-    <text><![CDATA[.animate({${1:${2:param1}: ${3:value1}${4:, ${5:param2}: ${6:value2}}}}, ${7:speed})$0]]></text>
-    <tag>animate</tag>
-    <description>animate</description>
-  </snippet>
-  <snippet>
-    <text><![CDATA[.append('${1:Some text <b>and bold!</b>}')$0]]></text>
-    <tag>append</tag>
-    <description>append</description>
-  </snippet>
-  <snippet>
-    <text><![CDATA[.appendTo('${1:selector expression}')$0]]></text>
-    <tag>appendTo</tag>
-    <description>appendTo</description>
-  </snippet>
-  <snippet>
-    <text><![CDATA[.attr('${1:attribute}'${2/(.+)/(?1:, :)/}${2/(^[0-9]+$)|.+/(?1::')/}${2:value}${2/(^[0-9]+$)|.+/(?1::')/})$0]]></text>
-    <tag>attr</tag>
-    <description>attr</description>
-  </snippet>
-  <snippet>
-    <text><![CDATA[<base href="$1" ${2}/>$0]]></text>
-    <tag>base</tag>
-    <description>Base</description>
-  </snippet>
-  <snippet>
-    <text><![CDATA[.before('${1:Some text <b>and bold!</b>}')$0]]></text>
-    <tag>before</tag>
-    <description>before</description>
-  </snippet>
-  <snippet>
-    <text><![CDATA[.bind('${1:event name}', function(${2:event}) {
-	${0:// Act on the event}
-});]]></text>
-    <tag>bind</tag>
-    <description>bind</description>
-  </snippet>
-  <snippet>
-    <text><![CDATA[.blur(${1:function() {
-	${0:// Act on the event}
-\}});]]></text>
-    <tag>blur</tag>
-    <description>blur</description>
-  </snippet>
-  <snippet>
-    <text><![CDATA[<body id="${1:ID} " onload="$2"}>
-	$0
-</body>]]></text>
-    <tag>body</tag>
-    <description>Body</description>
-  </snippet>
-  <snippet>
-    <text><![CDATA[\$.boxModel]]></text>
-    <tag>$boxModel</tag>
-    <description>$.boxModel</description>
-  </snippet>
-  <snippet>
-    <text><![CDATA[<br />
-$0]]></text>
-    <description>Br</description>
-    <accelerator><![CDATA[<Shift><Control>space]]></accelerator>
-  </snippet>
-  <snippet>
-    <text><![CDATA[\$.browser.${1:safari/opera/msie/mozilla}]]></text>
-    <tag>$browser</tag>
-    <description>$.browser</description>
-  </snippet>
-  <snippet>
-    <text><![CDATA[.change(${1:function() {
-	${0:// Act on the event}
-\}});]]></text>
-    <tag>change</tag>
-    <description>change</description>
-  </snippet>
-  <snippet>
-    <text><![CDATA[.children(${1/(.+)/(?1:':)/}${1:selector expression}${1/(.+)/(?1:':)/})$0]]></text>
-    <tag>children</tag>
-    <description>children</description>
-  </snippet>
-  <snippet>
-    <text><![CDATA[.click(${1:function() {
-	${0:// Act on the event}
-\}});]]></text>
-    <tag>click</tag>
-    <description>click</description>
-  </snippet>
-  <snippet>
-    <text><![CDATA[.clone()$0]]></text>
-    <description>clone</description>
-  </snippet>
-  <snippet>
-    <text><![CDATA[.filter('${1:selector expression}')$0]]></text>
-    <tag>filter</tag>
-    <description>closest</description>
-  </snippet>
-  <snippet>
-    <text><![CDATA[.contains('${1:text to find}')$0]]></text>
-    <tag>contains</tag>
-    <description>contains</description>
-  </snippet>
-  <snippet>
-    <text><![CDATA[.css({${1:attribute1}: '${2:value1}', ${3:attribute2}: '${4:value2}'})$0]]></text>
-    <tag>css</tag>
-    <description>css (map)</description>
-  </snippet>
-  <snippet>
-    <text><![CDATA[.data('${1:data}'${2/(.+)/(?1:, :)/}${2/(^[0-9]+$)|.+/(?1::')/}${2:value}${2/(^[0-9]+$)|.+/(?1::')/})$0]]></text>
-    <tag>data</tag>
-    <description>data</description>
-  </snippet>
-  <snippet>
-    <text><![CDATA[.dblclick(${1:function() {
-	${0:// Act on the event}
-\}});]]></text>
-    <tag>dblclick</tag>
-    <description>dblclick</description>
-  </snippet>
-  <snippet>
-    <text><![CDATA[.die('${1:event name}')$0]]></text>
-    <tag>die</tag>
-    <description>die</description>
-  </snippet>
-  <snippet>
-    <text><![CDATA[<div $1>
-	${0:$GEDIT_SELECTED_TEXT}
-</div>]]></text>
-    <tag>div</tag>
-    <description>div</description>
-  </snippet>
-  <snippet>
-    <text><![CDATA[<div ${1}>
-	${0:$GEDIT_SELECTED_TEXT}
-</div>]]></text>
-    <tag>div</tag>
-    <description>Div</description>
-  </snippet>
-  <snippet>
     <text><![CDATA[\$(document).ready(function() {
 	${0:// Stuff to do as soon as the DOM is ready;}
 });
 ]]></text>
+    <tag>docready</tag>
     <description>document ready</description>
   </snippet>
   <snippet>
-    <text><![CDATA[jQuery(document).ready(function(\$) {
-	${0:// Stuff to do as soon as the DOM is ready. Use \$() w/o colliding with other libs;}
-});
-]]></text>
-    <description>document ready (safe)</description>
+    <text><![CDATA[<g:applyLayout name="$1" />]]></text>
+    <tag>applyL</tag>
+    <description>gapplyLayout</description>
   </snippet>
   <snippet>
-    <text><![CDATA[\$.each(${1:array/object}, function(${2:index}${3:, ${4:val}}) {
-  ${0://iterate through array or object. val is used only for objects}
-});]]></text>
-    <tag>$each</tag>
-    <description>$.each</description>
+    <text><![CDATA[<g:checkBox name="${1}" value="${2:${true}}" />]]></text>
+    <tag>checkB</tag>
+    <description>gcheckBox</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[<g:collect in="${1:${books}}" expr="it.${2:title}">
+  <p>${2}: ${it}</p>
+</g:collect>]]></text>
+    <tag>collect</tag>
+    <description>gcollect</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[<g:datePicker name="${1:myDate}" value="${${2:new Date()}}" precision="${3:day}" />]]></text>
+    <tag>date</tag>
+    <description>gdatePicker</description>
   </snippet>
   <snippet>
     <text><![CDATA[<g:each in="${$1}" var="${2:item}" ${3:status="i"}>
@@ -256,142 +36,55 @@ $0]]></text>
 </g:each>
 ]]></text>
     <tag>each</tag>
-    <description>each</description>
-  </snippet>
-  <snippet>
-    <text><![CDATA[.each(function(index) {
-	${0:this.innerHTML = this + " is the element, " + index + " is the position";}
-});]]></text>
-    <tag>each</tag>
-    <description>each</description>
+    <description>geach</description>
   </snippet>
   <snippet>
     <text><![CDATA[<g:else>
 	$1
 </g:else>]]></text>
     <tag>else</tag>
-    <description>else</description>
+    <description>gelse</description>
   </snippet>
   <snippet>
-    <text><![CDATA[.end()$0]]></text>
-    <tag>end</tag>
-    <description>end</description>
-  </snippet>
-  <snippet>
-    <text><![CDATA[:eq(${1:n})$0]]></text>
-    <description>:eq(n)</description>
-  </snippet>
-  <snippet>
-    <text><![CDATA[.error(${1:function() {
-	${0:// Act on the event}
-\}});]]></text>
-    <tag>error</tag>
-    <description>error</description>
-  </snippet>
-  <snippet>
-    <text><![CDATA[\$.extend(${1:target object}, ${2:object1});
-$0]]></text>
-    <tag>$extend</tag>
-    <description>$.extend</description>
-  </snippet>
-  <snippet>
-    <text><![CDATA[.fadeIn(${1/(^[0-9]+$)|.+/(?1::')/}${1:slow/400/fast}${1/(^[0-9]+$)|.+/(?1::')/})$0]]></text>
-    <tag>fadeIn</tag>
-    <description>fadeIn</description>
-  </snippet>
-  <snippet>
-    <text><![CDATA[.fadeOut(${1/(^[0-9]+$)|.+/(?1::')/}${1:slow/400/fast}${1/(^[0-9]+$)|.+/(?1::')/}, function() {
-	${0://Stuff to do *after* the animation takes place};
-});
-]]></text>
-    <tag>fadeOut</tag>
-    <description>fadeOut (with callback)</description>
-  </snippet>
-  <snippet>
-    <text><![CDATA[.fadeTo(${1/(^[0-9]+$)|.+/(?1::')/}${1:slow/400/fast}${1/(^[0-9]+$)|.+/(?1::')/}, ${2:0.5})$0]]></text>
-    <tag>fadeTo</tag>
-    <description>fadeTo</description>
-  </snippet>
-  <snippet>
-    <text><![CDATA[.closest('${1:selector expression}')$0]]></text>
-    <tag>closest</tag>
-    <description>filter</description>
-  </snippet>
-  <snippet>
-    <text><![CDATA[.find('${1:selector expression}')$0]]></text>
-    <tag>find</tag>
-    <description>find</description>
-  </snippet>
-  <snippet>
-    <text><![CDATA[.focus(${1:function() {
-	${0:// Act on the event}
-\}});]]></text>
-    <tag>focus</tag>
-    <description>focus</description>
-  </snippet>
-  <snippet>
-    <text><![CDATA[<g:formatDate format="${1:MM-dd-yyyy}" date="${2:date}"/>]]></text>
-    <tag>formatD</tag>
-    <description>formatDate</description>
-  </snippet>
-  <snippet>
-    <text><![CDATA[<form action="${1}" method="${2:get}">
-	$0
-
-	<p><input type="submit" value="${3:Continue &rarr;}" /></p>
-</form>]]></text>
-    <tag>form</tag>
-    <description>Form</description>
-  </snippet>
-  <snippet>
-    <text><![CDATA[<g:datePicker name="${1:myDate}" value="${${2:new Date()}}" precision="${3:day}" />]]></text>
-    <tag>date</tag>
-    <description>gdatePick</description>
-  </snippet>
-  <snippet>
-    <text><![CDATA[\$.get('${1:/test/ajax-test.xml}'${2/(.+)/(?1:, function\(xml\){
- :)/}${2:alert( $("title",xml).text() )//optional stuff to do after get}${2/(.+)/(?1:;
-}:)/});
-$0]]></text>
-    <tag>$get</tag>
-    <description>$.get</description>
-  </snippet>
-  <snippet>
-    <text><![CDATA[.get(${1:element index})$0]]></text>
-    <tag>get</tag>
-    <description>get</description>
-  </snippet>
-  <snippet>
-    <text><![CDATA[\$.getJSON('${1:/path/to/file.cgi}'${2/(.+)/(?1:,{
- :)/}${2:param1: "value1", param2: "value2"}${2/(.+)/(?1:}:)/}${3/(.+)/(?1:,
- function\(json\){
-    :)/}${3://stuff to do after event occurs};${3/(.+)/(?1:
-}:)/});
-$0]]></text>
-    <tag>$getJSON</tag>
-    <description>$.getJSON</description>
-  </snippet>
-  <snippet>
-    <text><![CDATA[\$.getScript('${1:somescript.js}'${3/(.+)/(?1:, function\(\){
- :)/}${3://optional stuff to do after getScript}${3/(.+)/(?1:;
-}:)/});
-$0]]></text>
-    <tag>$getScript</tag>
-    <description>$.getScript</description>
+    <text><![CDATA[<g:fieldValue bean="${1:${book}}" field="${2:title}" />]]></text>
+    <tag>fieldV</tag>
+    <description>gfieldValue</description>
   </snippet>
   <snippet>
     <text><![CDATA[<g:findAll in="${$1}" expr="$2">
      $0
 </g:findAll>]]></text>
-    <tag>find</tag>
+    <tag>findA</tag>
     <description>gfindAll</description>
   </snippet>
   <snippet>
-    <text><![CDATA[<g:form controller="$1" action="${2:edit}" id="$3">
+    <text><![CDATA[<g:formatBoolean boolean="${1:${myBoolean}}" />]]></text>
+    <tag>formatB</tag>
+    <description>gformatBoolean</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[<g:formatDate format="${1:MM-dd-yyyy}" date="${2:date}"/>]]></text>
+    <tag>formatD</tag>
+    <description>gformatDate</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[<g:formatNumber number="${${1:mynumber}}" type="${2:currency}" currencyCode="${3:USD}" />]]></text>
+    <tag>formatN</tag>
+    <description>gformatNumber</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[<g:form name="${1:myForm}" action="${2:edit}" id="${3}">
 	$0
 </g:form>]]></text>
     <tag>form</tag>
     <description>gform</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[<g:hasErrors>
+    <g:eachError><p>${it.defaultMessage}</p></g:eachError>
+</g:hasErrors>]]></text>
+    <tag>hasE</tag>
+    <description>ghasErrors</description>
   </snippet>
   <snippet>
     <text><![CDATA[<g:if test="$1" >
@@ -401,10 +94,53 @@ $0]]></text>
     <description>gif</description>
   </snippet>
   <snippet>
+    <text><![CDATA[<g:include controller="${1:book}" action="${2:list}" />]]></text>
+    <tag>include</tag>
+    <description>ginclude</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[<g:javascript src="${1:myscript.js}" />]]></text>
+    <tag>js</tag>
+    <description>gjavascript</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[<g:join in="${1:['Grails', 'Groovy', 'Gradle']}" delimiter="${2:_}"/>]]></text>
+    <tag>join</tag>
+    <description>gjoin</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[<g:layoutBody />]]></text>
+    <tag>layoutB</tag>
+    <description>glayoutBody</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[<g:layoutHead />]]></text>
+    <tag>layoutH</tag>
+    <description>glayoutHead</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[<g:layoutTitle default="$1" />
+$0]]></text>
+    <tag>layoutT</tag>
+    <description>glayoutTitle</description>
+  </snippet>
+  <snippet>
     <text><![CDATA[<g:link controller="$1" action="${2:show}" id="$3">${2:show}</g:link>$0
 ]]></text>
     <tag>link</tag>
     <description>glink</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[<g:message code="${1:my.message.code}" />]]></text>
+    <tag>message</tag>
+    <description>gmessage</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[<g:paginate next="Forward" prev="Back"
+            maxsteps="0" controller="${1:book}"
+            action="${2:list}" total="${${3:Book}.count()}" />]]></text>
+    <tag>paginate</tag>
+    <description>gpaginate</description>
   </snippet>
   <snippet>
     <text><![CDATA[<g:passwordField name="${1:myPasswordField}" value="${${2:myPassword}}" />]]></text>
@@ -412,9 +148,38 @@ $0]]></text>
     <description>gpassword</description>
   </snippet>
   <snippet>
-    <text><![CDATA[<g:render template="$1" ${2:model}="$3" />]]></text>
+    <text><![CDATA[<g:radio name="${1:myGroup}" value="${2:1/2/3/4}" checked="${3:true/false}"/>]]></text>
+    <tag>radio</tag>
+    <description>gradio</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[<g:radioGroup name="${1:myGroup}" values="[1,2,3]" labels="['Yes!','Of course!','Always!']" value="${2:1}" >
+	<p>${it.label} : ${it.radio}</p>
+</g:radioGroup>]]></text>
+    <tag>radioG</tag>
+    <description>gradiogroup</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[<g:render template="$1" ${2:model/collection/bean}="$3" />]]></text>
     <tag>render</tag>
     <description>grender</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[<g:renderErrors ${1:bean/model}="${2:${book}}" as="list" />]]></text>
+    <tag>renderE</tag>
+    <description>grenderErrors</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[<g:grep in="${$1}" filter="$2">
+  <p>$3: ${$4}</p>
+</g:grep>]]></text>
+    <tag>grep</tag>
+    <description>grep</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[<g:resource dir="${1:images}" file="$2" ${3:absolute="true"}/>]]></text>
+    <tag>resource</tag>
+    <description>gresource</description>
   </snippet>
   <snippet>
     <text><![CDATA[<g:select name="$1"
@@ -426,473 +191,43 @@ $0]]></text>
     <description>gselect</description>
   </snippet>
   <snippet>
-    <text><![CDATA[:gt(${1:n})$0]]></text>
-    <description>:gt(n)</description>
+    <text><![CDATA[<g:set var="$1" value="${${2:new Date()}}" ${3: scope="page"} />]]></text>
+    <tag>set</tag>
+    <description>gset</description>
   </snippet>
   <snippet>
-    <text><![CDATA[.hasClass('${1:className}')$0]]></text>
-    <tag>hasClass</tag>
-    <description>hasClass</description>
+    <text><![CDATA[<g:sortableColumn property="$1" ${2:defaultOrder="desc" }title="$1" />]]></text>
+    <tag>sortableC</tag>
+    <description>gsortableColumn</description>
   </snippet>
   <snippet>
-    <text><![CDATA[<head>
-	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
-	<title>${1:Page Title}</title>
-	$0
-</head>]]></text>
-    <tag>head</tag>
-    <description>Head</description>
+    <text><![CDATA[<g:textArea name="$1" value="$2" ${3:rows="5" } ${4:cols="40" }/>]]></text>
+    <tag>textA</tag>
+    <description>gtextArea</description>
   </snippet>
   <snippet>
-    <text><![CDATA[<h${1:1} id="${2}">${3:$GEDIT_SELECTED_TEXT}</h${1}>
-$0]]></text>
-    <tag>h</tag>
-    <description>Heading</description>
+    <text><![CDATA[<g:textField name="$1" value="${$2}" />]]></text>
+    <tag>textF</tag>
+    <description>gtextField</description>
   </snippet>
   <snippet>
-    <text><![CDATA[.height(${1:integer})$0]]></text>
-    <tag>height</tag>
-    <description>height</description>
+    <text><![CDATA[<g:unless test="${$1}">
+     $0
+</g:unless>]]></text>
+    <tag>unless</tag>
+    <description>gunless</description>
   </snippet>
   <snippet>
-    <text><![CDATA[.hide(${1/(^[0-9]+$)|.+/(?1::')/}${1:slow/400/fast}${1/(^[0-9]+$)|.+/(?1::')/}, function() {
-	${0://Stuff to do *after* the animation takes place};
-});
-]]></text>
-    <tag>hide</tag>
-    <description>hide (with callback)</description>
-  </snippet>
-  <snippet>
-    <text><![CDATA[.hover(function() {
-	${1:// Stuff to do when the mouse enters the element;}
-}, function() {
-	${2:// Stuff to do when the mouse leaves the element;}
-});$0]]></text>
-    <tag>hover</tag>
-    <description>hover</description>
-  </snippet>
-  <snippet>
-    <text><![CDATA[.html(${1/(.+)/(?1:':)/}${1:Some text <b>and bold!</b>}${1/(.+)/(?1:':)/})$0]]></text>
-    <tag>html</tag>
-    <description>html</description>
+    <text><![CDATA[<g:uploadForm name="$1">
+    <input type="file" name="$2" />
+</g:uploadForm>]]></text>
+    <tag>uploadF</tag>
+    <description>guploadForm</description>
   </snippet>
   <snippet>
     <text><![CDATA[<input type="${1:text/submit/hidden/button}" name="${2:some_name}" value="$3" id="${5}" />]]></text>
     <tag>input</tag>
     <description>Input</description>
-  </snippet>
-  <snippet>
-    <text><![CDATA[.insertAfter('${1:selector expression}')$0]]></text>
-    <tag>insertAfter</tag>
-    <description>insertAfter</description>
-  </snippet>
-  <snippet>
-    <text><![CDATA[.insertBefore('${1:selector expression}')$0]]></text>
-    <tag>insertBefore</tag>
-    <description>insertBefore</description>
-  </snippet>
-  <snippet>
-    <text><![CDATA[.is('${1:selector expression}')$0]]></text>
-    <tag>is</tag>
-    <description>is</description>
-  </snippet>
-  <snippet>
-    <text><![CDATA[<link rel="${1:stylesheet}" href="${2:/css/master.css}" type="text/css" media="${3:screen}" title="${4:no title}" charset="${5:utf-8}" />]]></text>
-    <tag>link</tag>
-    <description>Link</description>
-  </snippet>
-  <snippet>
-    <text><![CDATA[.live('${1:event name}', function(${2:event}) {
-	${0:// Act on the event}
-});]]></text>
-    <tag>live</tag>
-    <description>live</description>
-  </snippet>
-  <snippet>
-    <text><![CDATA[.load('${1:/path/to/file.htm}'${2/(.+)/(?1:,{
- :)/}${2:param1: "value1", param2: "value2"}${2/(.+)/(?1:}:)/}${3/(.+)/(?1:,
- function\(\){
-    :)/}${3:// Stuff to do after the page is loaded}${3/(.+)/(?1:
-}:)/});
-$0]]></text>
-    <tag>load</tag>
-    <description>load (AHAH)</description>
-  </snippet>
-  <snippet>
-    <text><![CDATA[:lt(${1:n})$0]]></text>
-    <description>:lt(n)</description>
-  </snippet>
-  <snippet>
-    <text><![CDATA[\$.map(${1:array}, function(${2:item}${3:, ${4:index}}) {
-  ${5:return ${6:something};}
-});]]></text>
-    <tag>$map</tag>
-    <description>$.map</description>
-  </snippet>
-  <snippet>
-    <text><![CDATA[.map(function() {
-  ${1:return ${2:something};}
-})]]></text>
-    <tag>map</tag>
-    <description>map (function)</description>
-  </snippet>
-  <snippet>
-    <text><![CDATA[\$.merge(${1:array1}, ${2:array2});
-$0]]></text>
-    <tag>$merge</tag>
-    <description>$.merge</description>
-  </snippet>
-  <snippet>
-    <text><![CDATA[<meta name="${1:name}" content="${2:content}" />]]></text>
-    <tag>meta</tag>
-    <description>Meta</description>
-  </snippet>
-  <snippet>
-    <text><![CDATA[.mousedown(${1:function() {
-	${0:// Act on the event}
-\}});]]></text>
-    <tag>mousedown</tag>
-    <description>mousedown</description>
-  </snippet>
-  <snippet>
-    <text><![CDATA[.mousemove(${1:function() {
-	${0:// Act on the event}
-\}});]]></text>
-    <tag>mousemove</tag>
-    <description>mousemove</description>
-  </snippet>
-  <snippet>
-    <text><![CDATA[.mouseout(${1:function() {
-	${0:// Act on the event}
-\}});]]></text>
-    <tag>mouseout</tag>
-    <description>mouseout</description>
-  </snippet>
-  <snippet>
-    <text><![CDATA[.mouseover(${1:function() {
-	${0:// Act on the event}
-\}});]]></text>
-    <tag>mouseover</tag>
-    <description>mouseover</description>
-  </snippet>
-  <snippet>
-    <text><![CDATA[.mouseup(${1:function() {
-	${0:// Act on the event}
-\}});]]></text>
-    <tag>mouseup</tag>
-    <description>mouseup</description>
-  </snippet>
-  <snippet>
-    <text><![CDATA[.next(${1/(.+)/(?1:':)/}${1:selector expression}${1/(.+)/(?1:':)/})$0]]></text>
-    <tag>next</tag>
-    <description>next</description>
-  </snippet>
-  <snippet>
-    <text><![CDATA[&nbsp;]]></text>
-    <description>Non-Breaking Space</description>
-    <accelerator><![CDATA[<Control><Alt>space]]></accelerator>
-  </snippet>
-  <snippet>
-    <text><![CDATA[.not('${1:selector expression}')$0]]></text>
-    <tag>not</tag>
-    <description>not</description>
-  </snippet>
-  <snippet>
-    <text><![CDATA[.one('${1:event name}', function(${2:event}) {
-	${0:// Act on the event once}
-});]]></text>
-    <tag>one</tag>
-    <description>one</description>
-  </snippet>
-  <snippet>
-    <text><![CDATA[.parent(${1/(.+)/(?1:':)/}${1:selector expression}${1/(.+)/(?1:':)/})$0]]></text>
-    <tag>parent</tag>
-    <description>parent</description>
-  </snippet>
-  <snippet>
-    <text><![CDATA[.parents(${1/(.+)/(?1:':)/}${1:selector expression}${1/(.+)/(?1:':)/})$0]]></text>
-    <tag>parents</tag>
-    <description>parents</description>
-  </snippet>
-  <snippet>
-    <text><![CDATA[;(function(\$) {
-${2:// ${3:What does the $1 plugin do?}}
-\$.fn.${1:pluginName} = function(options) {
-  var opts = \$.extend({}, \$.fn.$1.defaults, options);
-
-  return this.each(function() {
-    var \$this = \$(this);
-
-  ${5:  ${6:// Support for the Metadata Plugin.}
-    var o = \$.meta ? \$.extend({\}, opts, \$this.data()) : opts;
-  }
-
-  });
-
-  // private function for debugging
-  function debug(\$obj) {
-    if (window.console && window.console.log) {
-      window.console.log(\$obj);
-    }
-  }
-};
-
-// default options
-\$.fn.$1.defaults = {
-  ${4:defaultOne:true,
-  defaultTwo:false,
-  defaultThree:'yay!'}
-};
-
-})(jQuery);
-]]></text>
-    <description>plugin</description>
-  </snippet>
-  <snippet>
-    <text><![CDATA[\$.post('${1:/path/to/file.cgi}'${2/(.+)/(?1:,{
- :)/}${2:param1: "value1", param2: "value2"}${2/(.+)/(?1:}:)/}${3/(.+)/(?1:,
- function\(\){
-    :)/}${3://stuff to do *after* page is loaded};${3/(.+)/(?1:
-}:)/});
-$0
-
-]]></text>
-    <tag>$post</tag>
-    <description>$.post</description>
-  </snippet>
-  <snippet>
-    <text><![CDATA[.prepend('${1:Some text <b>and bold!</b>}')$0]]></text>
-    <tag>prepend</tag>
-    <description>prepend</description>
-  </snippet>
-  <snippet>
-    <text><![CDATA[.prependTo('${1:selector expression}')$0]]></text>
-    <tag>prependTo</tag>
-    <description>prependTo</description>
-  </snippet>
-  <snippet>
-    <text><![CDATA[.prev(${1/(.+)/(?1:':)/}${1:selector expression}${1/(.+)/(?1:':)/})$0]]></text>
-    <tag>prev</tag>
-    <description>prev</description>
-  </snippet>
-  <snippet>
-    <text><![CDATA[.removeAttr('${1:attribute name}')$0]]></text>
-    <tag>removeAttr</tag>
-    <description>removeAttr</description>
-  </snippet>
-  <snippet>
-    <text><![CDATA[.remove()$0]]></text>
-    <tag>remove</tag>
-    <description>remove</description>
-  </snippet>
-  <snippet>
-    <text><![CDATA[.removeClass('${1:class name}')$0]]></text>
-    <tag>removeClass</tag>
-    <description>removeClass</description>
-  </snippet>
-  <snippet>
-    <text><![CDATA[.reset(${1:function() {
-	${0:// Act on the event}
-\}});]]></text>
-    <tag>reset</tag>
-    <description>reset</description>
-  </snippet>
-  <snippet>
-    <text><![CDATA[.resize(${1:function() {
-	${0:// Act on the event}
-\}});]]></text>
-    <tag>resize</tag>
-    <description>resize</description>
-  </snippet>
-  <snippet>
-    <text><![CDATA[<script type="text/javascript" language="javascript" charset="utf-8">
-// <![CDATA[
-	$0
-// ]]]]><![CDATA[>
-</script>]]></text>
-    <tag>script</tag>
-    <description>Script</description>
-  </snippet>
-  <snippet>
-    <text><![CDATA[<script src="$1" type="text/javascript" language="${2:javascript}" charset="${3:utf-8}" />]]></text>
-    <tag>scriptsrc</tag>
-    <description>Script With External Source</description>
-  </snippet>
-  <snippet>
-    <text><![CDATA[.scroll(${1:function() {
-	${0:// Act on the event}
-\}});]]></text>
-    <tag>scroll</tag>
-    <description>scroll</description>
-  </snippet>
-  <snippet>
-    <text><![CDATA[.select(function() {
-	${0:// Act on the event}
-});]]></text>
-    <tag>select</tag>
-    <description>select</description>
-  </snippet>
-  <snippet>
-    <text><![CDATA[\$(${1/(.+)/(?1:':)/}${1:string/element/array/function/jQuery object/string, context}${1/(.+)/(?1:':)/})$0]]></text>
-    <description>$ (Select DOM Element)</description>
-  </snippet>
-  <snippet>
-    <text><![CDATA[.serializeArray()$0]]></text>
-    <tag>serializeArray</tag>
-    <description>serializeArray</description>
-  </snippet>
-  <snippet>
-    <text><![CDATA[.serialize()$0]]></text>
-    <tag>serialize</tag>
-    <description>serialize</description>
-  </snippet>
-  <snippet>
-    <text><![CDATA[.show(${1/(^[0-9]+$)|.+/(?1::')/}${1:slow/400/fast}${1/(^[0-9]+$)|.+/(?1::')/})$0]]></text>
-    <tag>show</tag>
-    <description>show</description>
-  </snippet>
-  <snippet>
-    <text><![CDATA[.siblings(${1/(.+)/(?1:':)/}${1:selector expression}${1/(.+)/(?1:':)/})$0]]></text>
-    <tag>siblings</tag>
-    <description>siblings</description>
-  </snippet>
-  <snippet>
-    <text><![CDATA[.size()$0]]></text>
-    <tag>size</tag>
-    <description>size</description>
-  </snippet>
-  <snippet>
-    <text><![CDATA[.slice(${1:start}${2/(.+)/(?1:, :)/}${2:end})$0]]></text>
-    <tag>slice</tag>
-    <description>slice</description>
-  </snippet>
-  <snippet>
-    <text><![CDATA[.slideDown(${1/(^[0-9]+$)|.+/(?1::')/}${1:slow/400/fast}${1/(^[0-9]+$)|.+/(?1::')/})$0]]></text>
-    <tag>slideDown</tag>
-    <description>slideDown</description>
-  </snippet>
-  <snippet>
-    <text><![CDATA[.slideToggle(${1/(^[0-9]+$)|.+/(?1::')/}${1:slow/400/fast}${1/(^[0-9]+$)|.+/(?1::')/})$0]]></text>
-    <tag>slideToggle</tag>
-    <description>slideToggle</description>
-  </snippet>
-  <snippet>
-    <text><![CDATA[.slideUp(${1/(^[0-9]+$)|.+/(?1::')/}${1:slow/400/fast}${1/(^[0-9]+$)|.+/(?1::')/}, function() {
-	${0://Stuff to do *after* the animation takes place};
-});
-]]></text>
-    <tag>slideUp</tag>
-    <description>slideUp (with callback)</description>
-  </snippet>
-  <snippet>
-    <text><![CDATA[<style type="text/css" media="screen">
-/* <![CDATA[ */
-	$0
-/* ]]]]><![CDATA[> */
-</style>
-]]></text>
-    <tag>style</tag>
-    <description>Style</description>
-  </snippet>
-  <snippet>
-    <text><![CDATA[.submit(${1:function() {
-	${0:// Act on the event}
-\}});]]></text>
-    <tag>submit</tag>
-    <description>submit</description>
-  </snippet>
-  <snippet>
-    <text><![CDATA[<table border="${1:0}" cellspacing="${2:0}" cellpadding="${3:0}">
-	<tr><th>${4:Header}</th></tr>
-	<tr><td>${5:Data}</td></tr>
-	$0
-</table>]]></text>
-    <tag>table</tag>
-    <description>Table</description>
-  </snippet>
-  <snippet>
-    <text><![CDATA[<tr><td>$1</td></tr>
-$0]]></text>
-    <tag>tr</tag>
-    <description>Table Row</description>
-  </snippet>
-  <snippet>
-    <text><![CDATA[<textarea name="${1:Name}" rows="${2:8}" cols="${3:40}">$0</textarea>]]></text>
-    <tag>textarea</tag>
-    <description>Text Area</description>
-  </snippet>
-  <snippet>
-    <text><![CDATA[.text(${1:'some text'})$0]]></text>
-    <tag>text</tag>
-    <description>text</description>
-  </snippet>
-  <snippet>
-    <text><![CDATA[<title>${1:Page Title}</title>]]></text>
-    <tag>title</tag>
-    <description>Title</description>
-  </snippet>
-  <snippet>
-    <text><![CDATA[.toggleClass('${1:class name}')$0]]></text>
-    <tag>toggleClass</tag>
-    <description>toggleClass</description>
-  </snippet>
-  <snippet>
-    <text><![CDATA[.toggle(function() {
-	${1:// Stuff to do every *odd* time the element is clicked;}
-}, function() {
-	${2:// Stuff to do every *even* time the element is clicked;}
-});
-$0]]></text>
-    <tag>toggle</tag>
-    <description>toggle (event)</description>
-  </snippet>
-  <snippet>
-    <text><![CDATA[.trigger('${1:event name}')$0]]></text>
-    <tag>trigger</tag>
-    <description>trigger</description>
-  </snippet>
-  <snippet>
-    <text><![CDATA[\$.trim(${1:'${2:string}'})$0]]></text>
-    <tag>$trim</tag>
-    <description>$.trim</description>
-  </snippet>
-  <snippet>
-    <text><![CDATA[.unbind('${1:event name}')$0]]></text>
-    <tag>unbind</tag>
-    <description>unbind</description>
-  </snippet>
-  <snippet>
-    <text><![CDATA[\$.unique(${1:elementArray});
-$0]]></text>
-    <tag>$unique</tag>
-    <description>$.unique</description>
-  </snippet>
-  <snippet>
-    <text><![CDATA[.val(${1/(.+)/(?1:':)/}${1:text}${1/(.+)/(?1:':)/})$0]]></text>
-    <tag>val</tag>
-    <description>val</description>
-  </snippet>
-  <snippet>
-    <text><![CDATA[:visible
-]]></text>
-    <description>:visible</description>
-  </snippet>
-  <snippet>
-    <text><![CDATA[.width(${1:integer})$0]]></text>
-    <tag>width</tag>
-    <description>width</description>
-  </snippet>
-  <snippet>
-    <text><![CDATA[.wrapAll('${1:<div class="extra-wrapper"></div>}')$0]]></text>
-    <tag>wrap</tag>
-    <description>wrapAll</description>
-  </snippet>
-  <snippet>
-    <text><![CDATA[<a href="${1:http://somesite.com/}">${2:$GEDIT_SELECTED_TEXT}</a>
-]]></text>
-    <tag>ref</tag>
-    <description>Wrap Selection as Link</description>
-    <accelerator><![CDATA[<Shift><Alt>l]]></accelerator>
   </snippet>
   <snippet>
     <text><![CDATA[<${1:p}>$GEDIT_SELECTED_TEXT</${1}>]]></text>

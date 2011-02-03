@@ -1,36 +1,29 @@
 <?xml version='1.0' encoding='utf-8'?>
 <snippets language="groovy">
   <snippet>
+    <text><![CDATA[static belongsTo = [$1:$2]]]></text>
+    <tag>belongs</tag>
+    <description>belongsTo</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[class ${1:ClassName} ${2:extends AnotherClass} {
+
+}
+]]></text>
+    <tag>class</tag>
+    <description>class</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[def $1 = $2]]></text>
+    <tag>def</tag>
+    <description>def</description>
+  </snippet>
+  <snippet>
     <text><![CDATA[else{
 	$1
 }]]></text>
     <tag>else</tag>
     <description>else</description>
-  </snippet>
-  <snippet>
-    <text><![CDATA[render(view:'$1', model:['${2:item}':${2:item}])]]></text>
-    <tag>render</tag>
-    <description>render</description>
-  </snippet>
-  <snippet>
-    <text><![CDATA[redirect(action:${1:show}, id:$2)]]></text>
-    <tag>redirect</tag>
-    <description>redirect</description>
-  </snippet>
-  <snippet>
-    <text><![CDATA[try{
-	$1
-}]]></text>
-    <tag>try</tag>
-    <description>try</description>
-  </snippet>
-  <snippet>
-    <text><![CDATA[for ($${1:i} = ${2:0}; $${1:i} < $3; $${1:i}++){
-	// code...
-	$0
-}]]></text>
-    <tag>for</tag>
-    <description>for</description>
   </snippet>
   <snippet>
     <text><![CDATA[if($1.hasErrors()) {
@@ -42,16 +35,58 @@
     <description>errors</description>
   </snippet>
   <snippet>
+    <text><![CDATA[findAllBy${1:Title}("${2:The Shining}"${3:, [max:10, sort:"title", order:"desc", offset:100]} )]]></text>
+    <tag>fab</tag>
+    <description>findAllBy</description>
+  </snippet>
+  <snippet>
     <text><![CDATA[flash.message = "$1"]]></text>
-    <tag>fla</tag>
+    <tag>flash</tag>
     <description>flash.message</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[for ($${1:i} = ${2:0}; $${1:i} < $3; $${1:i}++){
+	// code...
+	$0
+}]]></text>
+    <tag>for</tag>
+    <description>for</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[static hasMany = [$1:$2]]]></text>
+    <tag>hasMany</tag>
+    <description>hasMany</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[if ($1) { // $2
+   $0
+
+} else { // $3
+
+   
+}
+]]></text>
+    <tag>ifelse</tag>
+    <description>if...else</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[redirect(action:${1:show}, id:$2)]]></text>
+    <tag>redirect</tag>
+    <description>redirect</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[render(view:'$1', model:['${2:item}':${2:item}])]]></text>
+    <tag>render</tag>
+    <description>render</description>
   </snippet>
   <snippet>
     <text><![CDATA[switch ($1) {
   case $2:
     // code..
     ${3:break}
-
+	case $4:
+		// code..
+		$3
   default:
      // 
 }
@@ -61,12 +96,32 @@
     <description>switch</description>
   </snippet>
   <snippet>
-    <text><![CDATA[def $1 = $2]]></text>
-    <tag>def</tag>
-    <description>def</description>
+    <text><![CDATA[String toString() {
+	$0
+}]]></text>
+    <tag>toString</tag>
+    <description>toString</description>
   </snippet>
   <snippet>
-    <tag>hasM</tag>
-    <description>hasMany</description>
+    <text><![CDATA[try{
+	$1
+}
+catch(e){
+	$2
+}]]></text>
+    <tag>tc</tag>
+    <description>try..catch</description>
+  </snippet>
+  <snippet>
+    <text><![CDATA[try {
+   $1
+} catch (e) {
+   $2
+} finally {
+   $3
+}
+]]></text>
+    <tag>tcf</tag>
+    <description>try...catch...finally</description>
   </snippet>
 </snippets>

@@ -1,3 +1,5 @@
+except where otherwise noted
+
 THIS CODE IS RELEASED UNDER THE [UNLICENSE](http://unlicense.org)
 ----------------------------------------------------------------------
 
