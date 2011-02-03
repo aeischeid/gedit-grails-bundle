@@ -54,7 +54,7 @@ History
 
 2/3/11 -
   merege added classbrowser plugin with groovy support from zedar's branch (thanks!)
-  
+  updated snippets for groovy and gsp docs
 
   
 
