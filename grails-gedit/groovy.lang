@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <language id="groovy" _name="Groovy" version="2.0" _section="Sources">
   <metadata>
-    <property name="mimetypes">text/x-groovy</property>
-    <property name="globs">*.groovy</property>
+    <property name="mimetypes">text/x-groovy;text/x-groovy++</property>
+    <property name="globs">*.groovy;*.gpp;*.g++</property>
     <property name="line-comment-start">//</property>
     <property name="block-comment-start">/*</property>
     <property name="block-comment-end">*/</property>
