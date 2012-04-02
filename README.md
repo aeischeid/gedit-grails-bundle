@@ -16,7 +16,6 @@ Installation
 ------------
 
 - Install script included (typically tested in latest Ubuntu)
-- Manually install plugins and styles by placing in ~/.gnome2/gedit file 
 
 History
 -------
@@ -58,4 +57,7 @@ History
 
 2/25/11 -
   fixed: both groovy and gpp files were getting mimetime for groovy++.
+  
+4/2/12 -
+	updating install script to reflect new file paths relating to gedit 3/GTK update
 
