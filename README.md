@@ -16,6 +16,7 @@ Installation
 ------------
 
 - Install script included (typically tested in latest Ubuntu)
+- Manually install plugins - (since ones included may not work with latest gedit) 
 
 History
 -------
@@ -58,6 +59,8 @@ History
 2/25/11 -
   fixed: both groovy and gpp files were getting mimetime for groovy++.
   
+  
 4/2/12 -
-	updating install script to reflect new file paths relating to gedit 3/GTK update
+  updating install script to reflect new file paths relating to gedit 3/GTK update.
+  removing plugins that are maintained elsewhere and no longer work with latest gedit.
 

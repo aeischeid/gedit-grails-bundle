@@ -5,9 +5,9 @@ MIME_PACKAGES="/usr/share/mime/packages/"
 GTKSOURCEVIEW="/usr/share/gtksourceview-2.0/language-specs/"
 TAGLIST="/usr/share/gedit/plugins/taglist/"
 BASH_COMPLETION="/etc/bash_completion.d/"
-PLUGINS="$HOME/.gnome2/gedit/plugins/"
-SNIPPETS="$HOME/.gnome2/gedit/snippets/"
-STYLES="$HOME/.gnome2/gedit/styles/"
+PLUGINS="/usr/share/gedit/plugins/"
+SNIPPETS="/usr/share/gedit/plugins/snippets/"
+STYLES="/usr/share/gtksourceview-3.0/styles/"
 SCRIPTS="/usr/local/bin/"
 
 if [ ! -d $MIME_PACKAGES ]; then
@@ -49,12 +49,13 @@ sudo cp ./grails_commands $BASH_COMPLETION
 sudo cp ./gred $SCRIPTS
 sudo chmod +x /usr/local/bin/gred
 sudo cp ./Grails.tags.gz $TAGLIST
+#copy the styles
+sudo cp ./styles/*.xml $STYLES
 #copy the snippets xml files
 sudo cp ./snippets/groovy.xml $SNIPPETS
 sudo cp ./snippets/gsp.xml $SNIPPETS
 
 sudo update-mime-database /usr/share/mime
-clear
 echo "Install succesfull!\r\n" 
 
 
