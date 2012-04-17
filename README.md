@@ -59,8 +59,10 @@ History
 2/25/11 -
   fixed: both groovy and gpp files were getting mimetime for groovy++.
   
-  
 4/2/12 -
   updating install script to reflect new file paths relating to gedit 3/GTK update.
   removing plugins that are maintained elsewhere and no longer work with latest gedit.
 
+4/17/12 -
+  little work on gradle files getting groovy syntax highlighting, and small improvements
+  to highlighting definition file.
